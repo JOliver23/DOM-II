@@ -3,11 +3,12 @@
 const mouseIn = event => {
     event.target.style.transform = 'scale(1.2)';
     event.target.style.transition = 'all .3s';
+    
 };
 const mouseOut = event => event.target.style.transform = 'scale(1)';
 const glowUp = event => {
     event.target.style.animation = 'glow .7s ease-in-out infinite alternate';
-    //event.target.preventDefault();
+    event.target.preventDefault();
 }
 const glowUp2 = event => {
     event.target.style.animation = 'glow2 .7s ease-in-out infinite alternate';
@@ -35,7 +36,8 @@ logo.addEventListener('mouseleave', (event) => {
 const navLink = document.querySelectorAll('.nav .nav-link');
 
 navLink.forEach(link => {
-    link.addEventListener('mouseover', glowUp);
+    link.addEventListener('click', glowUp);
+    
 })
 
 
@@ -51,6 +53,7 @@ const contentImg = document.querySelectorAll('.img-content');
 contentImg.forEach(img => {
     img.addEventListener('mouseenter', mouseIn)
     img.addEventListener('mouseleave', mouseOut)
+    
 })
 
 const subHeader = document.querySelectorAll('.text-content h2');
@@ -84,4 +87,16 @@ const picker = document.querySelectorAll('.content-destination');
 picker.forEach(tag => {
     tag.addEventListener('mouseenter', mouseIn);
     tag.addEventListener('mouseleave', mouseOut);
+})
+
+const destination = document.querySelector('.destination');
+const para = document.querySelector('.destination p');
+
+destination.addEventListener('click', (event) => {
+    event.target.style.backgroundColor = 'papayawhip';
+    event.target.style.color = '#EAC074';
+})
+para.addEventListener("click", (event) => {
+    event.target.style.color = 'rebeccapurple';
+    event.stopPropagation();
 })
