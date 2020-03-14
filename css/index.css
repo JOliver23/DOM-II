@@ -1,3 +1,19 @@
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px dodgerblue, 0 0 40px dodgerblue, 0 0 50px dodgerblue, 0 0 60px dodgerblue, 0 0 70px dodgerblue;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #7f949c, 0 0 40px #7f949c, 0 0 50px #7f949c, 0 0 60px #7f949c, 0 0 70px #7f949c, 0 0 80px #7f949c;
+  }
+}
+@-webkit-keyframes glow2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #facc4e, 0 0 40px #fcca28, 0 0 50px #fdd315, 0 0 60px #ffc917, 0 0 70px #fdc200;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #dfc4a6, 0 0 40px #dfc4a6, 0 0 50px #dfc4a6, 0 0 60px #dfc4a6, 0 0 70px #dfc4a6, 0 0 80px #dfc4a6;
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
